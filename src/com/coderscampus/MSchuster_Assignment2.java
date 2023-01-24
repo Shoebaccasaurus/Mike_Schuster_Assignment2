@@ -20,21 +20,23 @@ public class MSchuster_Assignment2 {
 			if (playerGuess < 1 || playerGuess > 100) {
 				System.out.println("Your guess is not between 1 and 100, please try again");
 				remainingAttempts++;
-			} else if (playerGuess < randomNumber) {
+
+			}
+			if (playerGuess < randomNumber) {
 				System.out.println("Please Pick a Higher Number");
 			} else if (playerGuess > randomNumber) {
 				System.out.println("Please Pick a Lower Number");
-			} else if (playerGuess == randomNumber) {
-				System.out.println("You Win!");
-				break;
 			}
+
 			playerGuess = scanner.nextInt();
 			if (remainingAttempts == 0 && playerGuess != randomNumber) {
 				System.out.println("You lose!");
 				System.out.println("The Number to guess was: " + randomNumber);
 			}
-
+			if (playerGuess == randomNumber) {
+				System.out.println("You Win!");
+				break;
+			}
 		}
-
 	}
 }
