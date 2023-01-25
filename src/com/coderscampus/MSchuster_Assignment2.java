@@ -11,6 +11,7 @@ public class MSchuster_Assignment2 {
 		Random random = new Random();
 		int randomNumber = random.nextInt(100) + 1;
 		int remainingAttempts = 4;
+//		System.out.println(randomNumber);
 		System.out.println("Guess a Number Between 1-100");
 		int playerGuess = scanner.nextInt();
 //		System.out.println(randomNumber);
@@ -26,6 +27,9 @@ public class MSchuster_Assignment2 {
 				System.out.println("Please Pick a Higher Number");
 			} else if (playerGuess > randomNumber) {
 				System.out.println("Please Pick a Lower Number");
+			} else if (playerGuess == randomNumber) {
+				System.out.println("You Win!");
+				break;
 			}
 
 			playerGuess = scanner.nextInt();
